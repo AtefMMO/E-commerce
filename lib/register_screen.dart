@@ -157,8 +157,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ),
                           InkWell(
                             onTap: () {
-                              Navigator.pushReplacementNamed(
-                                  context, LoginScreen.routeName);
+                             Navigator.pop(context);
                             },
                             child: Text(
                               'Login',

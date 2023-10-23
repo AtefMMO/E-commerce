@@ -151,7 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           InkWell(
                             onTap: () {
-                              Navigator.pushReplacementNamed(context, RegisterScreen.routeName);
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen(),));
                             },
                             child: Text(
                               'Create Account',
