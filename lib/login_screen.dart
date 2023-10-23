@@ -140,27 +140,25 @@ class _LoginScreenState extends State<LoginScreen> {
                                     BorderRadius.all(Radius.circular(15.r)))),
                       ),
                     ),
-                    Center(
-                      child: Padding(
-                        padding:
-                            EdgeInsets.only(top: 30.h),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Don’t have an account? ',
+                    Padding(
+                      padding:
+                          EdgeInsets.only(top: 30.h),
+                      child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Don’t have an account? ',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushReplacementNamed(context, RegisterScreen.routeName);
+                            },
+                            child: Text(
+                              'Create Account',
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
-                            InkWell(
-                              onTap: () {
-                                Navigator.pushReplacementNamed(context, RegisterScreen.routeName);
-                              },
-                              child: Text(
-                                'Create Account',
-                                style: Theme.of(context).textTheme.titleMedium,
-                              ),
-                            )
-                          ],
-                        ),
+                          )
+                        ],
                       ),
                     )
                   ],
