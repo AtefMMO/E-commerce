@@ -146,27 +146,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Already have an account? ',
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                          InkWell(
-                            onTap: () {
-                             Navigator.pop(context);
-                            },
-                            child: Text(
-                              'Login',
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
-                          )
-                        ],
-                      ),
-                    )
+
                   ],
                 ),
               ),
