@@ -24,7 +24,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
         color: Theme.of(context).primaryColor,
         height: double.infinity,
@@ -67,7 +66,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 if (value == null || value.trim().isEmpty) {
                                   return 'please enter your mobile no';
                                 }
-                                if (value.length!=13) {
+                                if (value.length != 13) {
                                   return 'invalid number';
                                 }
                               },
@@ -101,10 +100,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                     value.trim()!.length > 30) {
                                   return 'password should be >6 & <30';
                                 }
-                              },keyboardType: TextInputType.visiblePassword,
+                              },
+                              keyboardType: TextInputType.visiblePassword,
                               isObsecure: isObsecure,
                               suffixIcon: InkWell(
-                                child: isObsecure?Icon(Icons.visibility_off):Icon(Icons.visibility),
+                                child: isObsecure
+                                    ? Icon(Icons.visibility_off)
+                                    : Icon(Icons.visibility),
                                 onTap: () {
                                   if (isObsecure) {
                                     isObsecure = false;
@@ -146,7 +148,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
