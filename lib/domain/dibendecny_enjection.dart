@@ -3,6 +3,7 @@ import 'package:ecommerce/data/repository/data_source/auth_remote_data_source_im
 import 'package:ecommerce/data/repository/repository/auth_repository_impl.dart';
 import 'package:ecommerce/domain/repository/data_source/auth_remote_data_source.dart';
 import 'package:ecommerce/domain/repository/repository/auth_repository_contract.dart';
+import 'package:ecommerce/domain/use_case/login_use_case.dart';
 import 'package:ecommerce/domain/use_case/reqister_use_case.dart';
 
 RegisterUseCase injectRegisterUseCase(){
@@ -15,4 +16,7 @@ AuthRemoteDataSource injectAuthRemoteDataSource(){
   return AuthRemoteDataSourceImpl(
     apiManager: ApiManager.getInstance()
   );
+}
+LoginUseCase injectLoginUseCase(){
+  return LoginUseCase(repositoryContract: injectAuthRepositoryContract());
 }

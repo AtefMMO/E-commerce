@@ -5,7 +5,7 @@ import '../../../domain/entity/auth_result_entity.dart';
 import 'UserDto.dart';
 
 /// message : "success"
-/// user : {"name":"omar-mohamed-mostafa","email":"omar109@gmail.com","role":"user"}
+/// user : {"name":"atef_mohamed","email":"atef139@gmail.com","role":"user"}
 /// token : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQyNWY0NzU5Y2I3NDVkMjAxMWZlNSIsIm5hbWUiOiJvbWFyLW1vaGFtZWQtbW9zdGFmYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk5NTU0ODA1LCJleHAiOjE3MDczMzA4MDV9.3E-0Qh23_JiU30GIADZvBUqWoSM1hvG71WezOFEfUO0"
 
 class RegisterResponeDto {

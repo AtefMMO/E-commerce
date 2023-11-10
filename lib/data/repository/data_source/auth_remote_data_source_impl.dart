@@ -23,4 +23,16 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
           return Right(response.toAuthResultEntity());
         });
   }
+
+  @override
+  Future<Either<Failures, AuthResultEntity>> login(
+      String email, String password) async{
+    var either =
+    await apiManager.login(email, password);
+    return either.fold((l) {
+      return Left(Failures(errorMessage: l.errorMessage));
+    }, (response) {
+      return Right(response.toAuthResultEntity());
+    });
+  }
 }

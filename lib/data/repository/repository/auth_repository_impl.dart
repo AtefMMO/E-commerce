@@ -12,4 +12,9 @@ class AuthRepositoryImpl implements AuthRepositoryContract {
       String password, String rePassword, String phone) {
     return remoteDataSource.register(name, email, password, rePassword, phone);
   }
+
+  @override
+  Future<Either<Failures, AuthResultEntity>> login(String email, String password) {
+    return remoteDataSource.login(email, password);
+  }
 }
