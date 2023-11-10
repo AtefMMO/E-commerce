@@ -1,6 +1,6 @@
-import 'package:ecommerce/app_theme.dart';
-import 'package:ecommerce/register_screen.dart';
-import 'package:ecommerce/text_field_item.dart';
+import 'package:ecommerce/ui/app_theme.dart';
+import 'package:ecommerce/ui/auth/register/register_screen.dart';
+import 'package:ecommerce/ui/text_field_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,16 +13,14 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  String name = '';
-
-  String password = '';
-
+  var userNameController = TextEditingController();
+  var passController = TextEditingController();
   bool isObsecure=true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
+
       body: Container(
         color: Theme.of(context).primaryColor,height: double.infinity,
         child: SingleChildScrollView(
@@ -63,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             TextFieldItem(
                               fieldName: 'User Name',
                               hintText: 'enter your name',
-                              onChanged: (value) => name = value,
+                              controller: userNameController,
                               validator: (value) {
                                 if(value==null||value.trim().isEmpty){
                                   return 'please enter your name';
@@ -73,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             TextFieldItem(
                               fieldName: 'Password',
                               hintText: 'enter your password',
-                              onChanged: (value) => password = value,
+                              controller: passController,
                               validator: (value) {
                                 if ( value == null|| value.trim()!.isEmpty ) {
                                   return 'please enter password';
@@ -129,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   .textTheme
                                   .titleLarge!
                                   .copyWith(
-                                      color: AppTheme.blue, fontSize: 20.sp),
+                                  color: AppTheme.blue, fontSize: 20.sp),
                             ),
                           ),
                         ),
@@ -137,12 +135,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             backgroundColor: AppTheme.white,
                             shape: RoundedRectangleBorder(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(15.r)))),
+                                BorderRadius.all(Radius.circular(15.r)))),
                       ),
                     ),
                     Padding(
                       padding:
-                          EdgeInsets.only(top: 30.h),
+                      EdgeInsets.only(top: 30.h),
                       child: Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(

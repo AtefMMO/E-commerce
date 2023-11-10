@@ -1,8 +1,8 @@
-import 'package:ecommerce/app_theme.dart';
+import 'package:ecommerce/ui/app_theme.dart';
 
-import 'package:ecommerce/login_screen.dart';
-import 'package:ecommerce/register_screen.dart';
-import 'package:ecommerce/splash_screen.dart';
+import 'package:ecommerce/ui/auth/login/login_screen.dart';
+import 'package:ecommerce/ui/auth/register/register_screen.dart';
+import 'package:ecommerce/ui/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
